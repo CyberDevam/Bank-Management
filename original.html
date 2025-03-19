@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banking Management System</title>
@@ -17,7 +18,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: url(https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg) no-repeat center center;
+            background: url(https://t4.ftcdn.net/jpg/02/71/20/57/360_F_271205794_QlThR0mgUnNd50mtB9I6eoeeC9lv9ObP.jpg) no-repeat center center;
             background-size: cover;
             position: relative;
         }
@@ -74,22 +75,22 @@
 </head>
 <body>
     <div class="container" id="home">
-        <h2>Banking Management System</h2>
+        <h2 style="color: white;">Banking Management System</h2>
         <button onclick="showPage('signup')">Sign Up</button>
         <button onclick="showPage('login')">Login</button>
         <button onclick="showPage('about')">About Us</button>
     </div>
 
     <div class="container" id="signup" style="display: none;">
-        <h2>Sign Up</h2>
+        <h2 style="color: white;">Sign Up</h2>
         <input type="text" id="signupUser" placeholder="Enter Username">
         <input type="password" id="signupPass" placeholder="Enter Password">
         <button onclick="signup()">Register</button>
         <button onclick="showPage('home')">Back</button>
     </div>
-
+    
     <div class="container" id="login" style="display: none;">
-        <h2>Login</h2>
+        <h2 style="color: white;">Login</h2>
         <input type="text" id="loginUser" placeholder="Enter Username">
         <input type="password" id="loginPass" placeholder="Enter Password">
         <button onclick="login()">Login</button>
@@ -97,7 +98,7 @@
     </div>
 
     <div class="container" id="dashboard" style="display: none;">
-        <h2>Dashboard</h2>
+        <h2 style="color: white;">Dashboard</h2>
         <p>Welcome, <span id="userName"></span></p>
         <p>Balance: ₹<span id="balance"></span></p>
         <input type="number" id="amount" placeholder="Enter Amount">
@@ -107,7 +108,7 @@
     </div>
 
     <div class="container" id="about" style="display: none;">
-        <h2>About Us</h2>
+        <h2 style="color: white;">About Us</h2>
         <p>Welcome to our Banking Management System, ensuring secure and fast transactions.</p>
         <button onclick="showPage('home')">Back</button>
     </div>
@@ -139,8 +140,7 @@
 
             users.push({ username, password, balance: 1000 });
             localStorage.setItem("users", JSON.stringify(users));
-
-            alert("User Registered Successfully!");
+            
             username = "";
             password = "";
             showPage("login");
